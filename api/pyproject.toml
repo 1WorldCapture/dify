@@ -104,6 +104,7 @@ package-mode = false
 
 [tool.poetry.dependencies]
 anthropic = "~0.23.1"
+aryn-sdk = {version = "0.1.1", python = ">=3.10,<3.12"}
 authlib = "1.3.1"
 azure-identity = "1.16.1"
 azure-storage-blob = "12.13.0"
@@ -161,7 +162,7 @@ pyyaml = "~6.0.1"
 readabilipy = "0.2.0"
 redis = { version = "~5.0.3", extras = ["hiredis"] }
 replicate = "~0.22.0"
-resend = "~0.7.0"
+resend = "~1.2.0"
 safetensors = "~0.4.3"
 scikit-learn = "^1.5.1"
 sentry-sdk = { version = "~1.44.1", extras = ["flask"] }
@@ -185,7 +186,7 @@ kaleido = "0.2.1"
 ############################################################
 
 [tool.poetry.group.tool.dependencies]
-arxiv = "2.1.0"
+arxiv = "2.1.1"
 matplotlib = "~3.8.2"
 newspaper3k = "0.2.8"
 duckduckgo-search = "^6.2.6"
@@ -213,7 +214,7 @@ pymysql = "1.1.1"
 tcvectordb = "1.3.2"
 tidb-vector = "0.0.9"
 qdrant-client = "1.7.3"
-weaviate-client = "~3.21.0"
+weaviate-client = "~3.24.0"
 alibabacloud_gpdb20160503 = "~3.8.0"
 alibabacloud_tea_openapi = "~0.3.9"
 clickhouse-connect = "~0.7.16"

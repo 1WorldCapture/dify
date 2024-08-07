@@ -24,6 +24,7 @@ from core.rag.extractor.unstructured.unstructured_ppt_extractor import Unstructu
 from core.rag.extractor.unstructured.unstructured_pptx_extractor import UnstructuredPPTXExtractor
 from core.rag.extractor.unstructured.unstructured_text_extractor import UnstructuredTextExtractor
 from core.rag.extractor.unstructured.unstructured_xml_extractor import UnstructuredXmlExtractor
+from core.rag.extractor.aryn.aryn_pdf_extractor import ArynPDFExtractor
 from core.rag.extractor.word_extractor import WordExtractor
 from core.rag.models.document import Document
 from extensions.ext_storage import storage
@@ -96,6 +97,7 @@ class ExtractProcessor:
                 etl_type = dify_config.ETL_TYPE
                 unstructured_api_url = dify_config.UNSTRUCTURED_API_URL
                 unstructured_api_key = dify_config.UNSTRUCTURED_API_KEY
+                aryn_api_key = dify_config.ARYN_API_KEY
                 if etl_type == 'Unstructured':
                     if file_extension == '.xlsx' or file_extension == '.xls':
                         extractor = ExcelExtractor(file_path)
@@ -130,7 +132,8 @@ class ExtractProcessor:
                     if file_extension == '.xlsx' or file_extension == '.xls':
                         extractor = ExcelExtractor(file_path)
                     elif file_extension == '.pdf':
-                        extractor = PdfExtractor(file_path)
+                        # extractor = PdfExtractor(file_path)
+                        extractor = ArynPDFExtractor(file_path, aryn_api_key)
                     elif file_extension in ['.md', '.markdown']:
                         extractor = MarkdownExtractor(file_path, autodetect_encoding=True)
                     elif file_extension in ['.htm', '.html']:

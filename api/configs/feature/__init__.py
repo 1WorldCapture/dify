@@ -390,6 +390,11 @@ class RagEtlConfig(BaseSettings):
         default=None,
     )
 
+    ARYN_API_KEY: Optional[str] = Field(
+        description='API key for Aryn',
+        default=None,
+    )
+
 
 class DataSetConfig(BaseSettings):
     """
