@@ -6,6 +6,7 @@ from urllib.parse import unquote
 
 from configs import dify_config
 from core.helper import ssrf_proxy
+from core.rag.extractor.aryn.aryn_pdf_extractor import ArynPDFExtractor
 from core.rag.extractor.csv_extractor import CSVExtractor
 from core.rag.extractor.entity.datasource_type import DatasourceType
 from core.rag.extractor.entity.extract_setting import ExtractSetting
@@ -24,7 +25,6 @@ from core.rag.extractor.unstructured.unstructured_ppt_extractor import Unstructu
 from core.rag.extractor.unstructured.unstructured_pptx_extractor import UnstructuredPPTXExtractor
 from core.rag.extractor.unstructured.unstructured_text_extractor import UnstructuredTextExtractor
 from core.rag.extractor.unstructured.unstructured_xml_extractor import UnstructuredXmlExtractor
-from core.rag.extractor.aryn.aryn_pdf_extractor import ArynPDFExtractor
 from core.rag.extractor.word_extractor import WordExtractor
 from core.rag.models.document import Document
 from extensions.ext_storage import storage

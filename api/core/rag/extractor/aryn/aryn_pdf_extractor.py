@@ -1,10 +1,10 @@
 import logging
 from typing import Optional
 
+from aryn_sdk.partition import partition_file, table_elem_to_dataframe
+
 from core.rag.extractor.extractor_base import BaseExtractor
 from core.rag.models.document import Document
-
-from aryn_sdk.partition import partition_file, table_elem_to_dataframe
 
 logger = logging.getLogger(__name__)
 
